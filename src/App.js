@@ -1,12 +1,16 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavbarSpotify from "./component/NavbarSpotify";
+import MainSpotify from "./component/MainSpotify";
+import SongSpotify from "./component/SongSpotify";
+import anotherSong from "./component/anotherSong";
 
 function App() {
   return (
-    <div>
-      <NavbarSpotify />
-    </div>
+    <>
+      <MainSpotify />
+      <SongSpotify />
+      <anotherSong />
+    </>
   );
 }
 
