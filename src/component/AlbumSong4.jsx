@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Col } from "react-bootstrap";
 import SingleSong from "./SingleSong";
 
-class SongSpotify extends Component {
+class AlbumSong4 extends Component {
   state = {
     song: [],
     isLoading: true,
@@ -10,7 +10,9 @@ class SongSpotify extends Component {
   };
 
   componentDidMount() {
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
+    fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=claudiobaglioni"
+    )
       .then((res) => {
         if (res.ok) {
           console.log(res);
@@ -36,12 +38,12 @@ class SongSpotify extends Component {
       <Col className="col-12 d-flex ">
         {this.state.isLoading && <p>Loading...</p>}
         {this.state.isError && <p>Errore recupero dati</p>}:
+        <h3 className="ms-2 mb-3 text-white">Music</h3>
         {this.state.song.map((song) => (
           <SingleSong
             key={song.id}
-            title={song.Title}
+            title={song.title}
             poster={song.album.cover_medium}
-            description={song.title}
             duration={song.duration}
           />
         ))}
@@ -50,4 +52,4 @@ class SongSpotify extends Component {
   }
 }
 
-export default SongSpotify;
+export default AlbumSong4;

@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Col } from "react-bootstrap";
 import SingleSong from "./SingleSong";
 
-class anotherSong extends Component {
+class AlbumSong3 extends Component {
   state = {
     song: [],
     isLoading: true,
@@ -10,9 +10,7 @@ class anotherSong extends Component {
   };
 
   componentDidMount() {
-    fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=tizianoferro"
-    )
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=Maneskin")
       .then((res) => {
         if (res.ok) {
           console.log(res);
@@ -51,4 +49,4 @@ class anotherSong extends Component {
   }
 }
 
-export default anotherSong;
+export default AlbumSong3;
