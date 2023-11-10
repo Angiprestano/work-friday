@@ -35,19 +35,21 @@ class AlbumSong2 extends Component {
   }
   render() {
     return (
-      <Col className="col-12 d-flex ">
-        {this.state.isLoading && <p>Loading...</p>}
-        {this.state.isError && <p>Errore recupero dati</p>}:
-        {this.state.song.map((song) => (
-          <SingleSong
-            key={song.id}
-            title={song.title}
-            title2={song.title_version}
-            poster={song.album.cover_medium}
-            duration={song.duration}
-          />
-        ))}
-      </Col>
+      <>
+        <h3>Pinguini Tattici Nucleari</h3>
+        <Col className=" d-flex ms-2 ">
+          {this.state.song.map((song) => (
+            <SingleSong
+              key={song.id}
+              title={song.title}
+              title2={song.title_version}
+              poster={song.album.cover_medium}
+              artist={song.artist.name}
+              duration={song.duration}
+            />
+          ))}
+        </Col>
+      </>
     );
   }
 }

@@ -11,13 +11,15 @@ import AlbumSong5 from "./component/AlbumSong5";
 function App() {
   return (
     <>
-      <MainSpotify />
-      <SongSpotify />
-      <NewAlbumSong />
-      <AlbumSong2 />
-      <AlbumSong3 />
-      <AlbumSong4 />
-      <AlbumSong5 />
+      <div className="bg-dark">
+        <MainSpotify />
+        <SongSpotify />
+        <NewAlbumSong />
+        <AlbumSong2 />
+        <AlbumSong3 />
+        <AlbumSong4 />
+        <AlbumSong5 />
+      </div>
     </>
   );
 }

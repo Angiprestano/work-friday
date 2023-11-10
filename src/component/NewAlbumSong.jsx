@@ -33,18 +33,20 @@ class NewAlbumSong extends Component {
   }
   render() {
     return (
-      <Col className="col-12 d-flex ">
-        {this.state.isLoading && <p>Loading...</p>}
-        {this.state.isError && <p>Errore recupero dati</p>}:
-        <h3 className="ms-2 mb-3 text-white">Music</h3>
-        {this.state.song.map((song) => (
-          <SingleSong
-            key={song.id}
-            title={song.title}
-            poster={song.album.cover_medium}
-          />
-        ))}
-      </Col>
+      <>
+        <h3 className="ms-2">Ultimo</h3>
+        <Col className="col-12 d-flex ">
+          {this.state.song.map((song) => (
+            <SingleSong
+              key={song.id}
+              artist={song.artist.name}
+              traks={song.title.short}
+              poster={song.album.cover_medium}
+              duration={song.duration}
+            />
+          ))}
+        </Col>
+      </>
     );
   }
 }

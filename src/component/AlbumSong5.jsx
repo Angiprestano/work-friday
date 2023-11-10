@@ -35,18 +35,19 @@ class AlbumSong5 extends Component {
   }
   render() {
     return (
-      <Col className="col-12 d-flex ">
-        {this.state.isLoading && <p>Loading...</p>}
-        {this.state.isError && <p>Errore recupero dati</p>}:
-        <h3 className="ms-2 mb-3 text-white">Music</h3>
-        {this.state.song.map((song) => (
-          <SingleSong
-            key={song.id}
-            title={song.Title}
-            poster={song.album.cover_medium}
-          />
-        ))}
-      </Col>
+      <>
+        <h3 className="ms-2 mb-2 ms-2">Cèline Dion</h3>
+        <Col className="col-12 d-flex ">
+          {this.state.song.map((song) => (
+            <SingleSong
+              key={song.id}
+              title={song.Title}
+              artist={song.artist.name}
+              poster={song.album.cover_medium}
+            />
+          ))}
+        </Col>
+      </>
     );
   }
 }
