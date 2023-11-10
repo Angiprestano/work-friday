@@ -6,12 +6,12 @@ const MainSpotify = () => {
     <Container>
       <Row col={12} col-md={6} lg={7}>
         <Col className="d-flex flex-row">
-          <Nav className="col-9 col-lg-11 mainLinks d-none d-md-flex">
-            <NavLink className="text-secondary">TRENDING</NavLink>
-            <NavLink className="text-secondary">PODCAST</NavLink>
-            <NavLink className="text-secondary">MOODS AND GENRES</NavLink>
-            <NavLink className="text-secondary">NEW RELEASES</NavLink>
-            <NavLink className="text-secondary">DISCOVER</NavLink>
+          <Nav className="col-9 col-lg-11 mainLinks d-none d-md-flex ms-5 ps-5">
+            <NavLink className="text-secondary ps-5 ms-5">TRENDING</NavLink>
+            <NavLink className="text-secondary ms-3">PODCAST</NavLink>
+            <NavLink className="text-secondary ms-3">MOODS AND GENRES</NavLink>
+            <NavLink className="text-secondary ms-3">NEW RELEASES</NavLink>
+            <NavLink className="text-secondary ms-3">DISCOVER</NavLink>
           </Nav>
         </Col>
       </Row>
