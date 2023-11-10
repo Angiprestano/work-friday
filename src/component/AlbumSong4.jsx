@@ -36,7 +36,7 @@ class AlbumSong4 extends Component {
   render() {
     return (
       <>
-        <h3 className="ms-2 mb-3">Claudio Baglioni</h3>
+        <h3 className="ms-2 mt-2">Claudio Baglioni</h3>
         <Col className="col-12 d-flex ">
           {this.state.song.map((song) => (
             <SingleSong

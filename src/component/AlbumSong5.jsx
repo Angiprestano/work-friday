@@ -36,7 +36,7 @@ class AlbumSong5 extends Component {
   render() {
     return (
       <>
-        <h3 className="ms-2 mb-2 ms-2">Cèline Dion</h3>
+        <h3 className="ms-2 mb-3">Cèline Dion</h3>
         <Col className="col-12 d-flex ">
           {this.state.song.map((song) => (
             <SingleSong
